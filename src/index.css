@@ -836,6 +836,14 @@ body {
   padding-right: 0.5rem;
 }
 
+.publish-date time {
+  padding-left: 0.5rem;
+}
+
+.card-meta-link span {
+  padding-left: 0.5rem;
+}
+
 .arrival-title {
   font-size: 2rem;
   padding: 2rem 0;
