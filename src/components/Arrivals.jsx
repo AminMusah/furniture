@@ -22,7 +22,7 @@ function Arrivals({image,name}) {
               </a>
 
               <a href="#" className="card-meta-link">
-                <PriceTagLineIcon/>
+                <PriceTagLineIcon size={10}/>
                 <span>Interior</span>
               </a>
             </div>
@@ -31,7 +31,7 @@ function Arrivals({image,name}) {
             </h3>
             <div className="arrivalcontent-bottom">
               <div className="publish-date">
-                <CalendarLineIcon/>
+                <CalendarLineIcon size={10}/>
                 <time datetime="2022-27-04">Apr 27, 2022</time>
               </div>
 
