@@ -1,68 +1,74 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Furniture() {
+  const [tab,setTab] = useState(true)
+  const [item,setItem] = useState(false)
     return (
       <div>
         <Header/>
-        <section class="section project" id="project" aria-label="project">
-          <div class="container">
-            <p class="section-subtitle has-before text-center">Furniture</p>
+        <section className="section project" id="project">
+          <div className="container">
+            <p className="section-subtitle has-before text-center">Furniture</p>
   
-            <h2 class="h2 section-title text-center">
-              Furniture Co. <span class="has-before">Furnitures</span>
+            <h2 className="h2 section-title text-center">
+              Furniture Co. <span className="has-before">Furnitures</span>
             </h2>
   
-            <ul class="filter-list">
+            <ul className="filter-list">
               <li>
-                <button class="filter-btn active" data-filter-btn>
+                <button className={`filter-btn ${tab ? 'active' : ''}`} onClick={(e) => {
+                  console.log(e.currentTarget)
+                  e.target ? setTab(!tab): '';
+                }}>
                   All
                 </button>
               </li>
 
               <li>
-                <button class="filter-btn" data-filter-btn>
+                <button className={`filter-btn`}>
                   CUSTOMIZATION
                 </button>
               </li>
   
               <li>
-                <button class="filter-btn" data-filter-btn>
+                <button className={`filter-btn `}>
                   KITCHEN
                 </button>
               </li>
   
               <li>
-                <button class="filter-btn" data-filter-btn>
+                <button className={`filter-btn `}>
                   BEDROOM
                 </button>
               </li>
   
               <li>
-                <button class="filter-btn" data-filter-btn>
+                <button className={`filter-btn`} >
                   OFFICE
                 </button>
               </li>
   
               <li>
-                <button class="filter-btn" data-filter-btn>
+                <button className={`filter-btn`} >
                   BATHROOM
                 </button>
               </li>
             </ul>
   
-            <ul class="grid-list">
+            <ul className="grid-list">
               <li>
               <Link to='product/7'>
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serenti20.jpg"
+                      src="/assets/images/serenti20.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -70,14 +76,14 @@ function Furniture() {
               </li>
               <li>
               <Link to='product/8'>
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serenti35.jpg"
+                      src="/assets/images/serenti35.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -85,14 +91,14 @@ function Furniture() {
               </li>
               <li>
               <Link to='product/9'>
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serinti1.jpg"
+                      src="/assets/images/serinti1.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -101,14 +107,14 @@ function Furniture() {
               <li>
               <Link to='product/10'>
 
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serenti26.jpg"
+                      src="/assets/images/serenti26.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -117,14 +123,14 @@ function Furniture() {
               <li>
               <Link to='product/11'>
 
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serinti11.jpg"
+                      src="/assets/images/serinti11.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -132,14 +138,14 @@ function Furniture() {
               </li>
               <li>
               <Link to='product/12'>
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serinti12.jpg"
+                      src="/assets/images/serinti12.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -148,14 +154,14 @@ function Furniture() {
               <li>
               <Link to='product/13'>
 
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serinti13.jpg"
+                      src="/assets/images/serinti13.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -164,14 +170,14 @@ function Furniture() {
               </li>
               <li>
               <Link to='product/14'>
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serenti20.jpg"
+                      src="/assets/images/serenti20.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -181,14 +187,14 @@ function Furniture() {
               <li>
               <Link to='product/15'>
 
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/photo-1600684388091-627109f3cd60.avif"
+                      src="/assets/images/serenti29.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -199,13 +205,13 @@ function Furniture() {
               <Link to='product/16'>
 
                 <div class="project-card">
-                  <figure class="card-banner img-holder">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/photo-1600566752355-35792bedcfea.avif"
+                      src="/assets/images/serenti26.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -215,14 +221,14 @@ function Furniture() {
               <li>
               <Link to='product/17'>
 
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/photo-1586798271449-9726e2172525.avif"
+                      src="/assets/images/serenti25.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -232,14 +238,14 @@ function Furniture() {
               <li>
               <Link to='product/18'>
 
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/photo-1555041469-a586c61ea9bc.avif"
+                      src="/assets/images/serenti20.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -247,14 +253,14 @@ function Furniture() {
               </li>
               <li>
               <Link to='product/19'>
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serinti4.jpg"
+                      src="/assets/images/serinti12.jpg"
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>

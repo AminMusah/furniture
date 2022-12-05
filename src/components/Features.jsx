@@ -1,36 +1,39 @@
+import RocketLineIcon from 'remixicon-react/Rocket2LineIcon'
+import GroupFillIcon from 'remixicon-react/GroupFillIcon'
+import CustomerServiceFillIcon from 'remixicon-react/CustomerServiceFillIcon'
 function Features() {
   return (
     <div>
-      <section class="section feature" id="feature" aria-label="feature">
-        <div class="container">
-          <figure class="feature-banner">
+      <section className="section feature" id="feature" >
+        <div className="container">
+          <figure className="feature-banner">
             <img
-              src="/src/assets/images/serinti4.jpg"
+              src="/assets/images/serinti4.jpg"
               width="794"
               height="637"
               alt="hero banner"
               class="w-100"
             />
           </figure>
-          <div class="feature-content">
-            <p class="section-subtitle has-before">Why Choose us</p>
+          <div className="feature-content">
+            <p className="section-subtitle has-before">Why Choose us</p>
 
-            <h2 class="h2 section-title">
+            <h2 className="h2 section-title">
               Furniture Co. is committed to providing its clients with the best
               possible products and services.
             </h2>
 
-            <ul class="feature-list">
+            <ul className="feature-list">
               <li>
-                <div class="feature-card">
-                  <div class="card-icon">
-                    <ion-icon name="rocket-sharp" aria-hidden="true"></ion-icon>
+                <div className="feature-card">
+                  <div className="card-icon">
+                    <RocketLineIcon />
                   </div>
 
                   <div>
-                    <h3 class="h3 card-title">Fast working process</h3>
+                    <h3 className="h3 card-title">Fast working process</h3>
 
-                    <p class="card-text">
+                    <p className="card-text">
                       At Furniture Co we specialize in designing, building,
                       shipping and scaling beautiful Products.
                     </p>
@@ -38,15 +41,15 @@ function Features() {
                 </div>
               </li>
               <li>
-                <div class="feature-card">
-                  <div class="card-icon">
-                    <ion-icon name="rocket-sharp" aria-hidden="true"></ion-icon>
+                <div className="feature-card">
+                  <div className="card-icon">
+                    <GroupFillIcon/>
                   </div>
 
                   <div>
-                    <h3 class="h3 card-title">Didicated team</h3>
+                    <h3 className="h3 card-title">Didicated team</h3>
 
-                    <p class="card-text">
+                    <p className="card-text">
                       A dedicated team of experts who
                       work together to create high-quality furniture. This team
                       is responsible for every aspect of the furniture-making
@@ -59,15 +62,15 @@ function Features() {
                 </div>
               </li>
               <li>
-                <div class="feature-card">
-                  <div class="card-icon">
-                    <ion-icon name="rocket-sharp" aria-hidden="true"></ion-icon>
+                <div className="feature-card">
+                  <div className="card-icon">
+                    <CustomerServiceFillIcon/>
                   </div>
 
                   <div>
-                    <h3 class="h3 card-title">Personalized Services</h3>
+                    <h3 className="h3 card-title">Personalized Services</h3>
 
-                    <p class="card-text">
+                    <p className="card-text">
                       We provide office refurbishment services and specialize in
                       partitioning, office furnishings, and fittings. We have a
                       wide range of options to choose from so that you can find

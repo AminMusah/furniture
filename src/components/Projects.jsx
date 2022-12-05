@@ -3,56 +3,56 @@ import { Route, Routes, Link } from "react-router-dom";
 function Projects() {
   return (
     <div>
-      <section class="section project" id="project" aria-label="project">
-        <div class="container">
-          <p class="section-subtitle has-before text-center">Projects</p>
+      <section className="section project" id="project">
+        <div className="container">
+          <p className="section-subtitle has-before text-center">Projects</p>
 
-          <h2 class="h2 section-title text-center">
-            Furniture Co. <span class="has-before">projects</span>
+          <h2 className="h2 section-title text-center">
+            Furniture Co. <span className="has-before">projects</span>
           </h2>
 
-          <ul class="filter-list">
+          <ul className="filter-list">
             <li>
-              <button class="filter-btn active" data-filter-btn>
+              <button className="filter-btn active">
                 CUSTOMIZATION
               </button>
             </li>
 
             <li>
-              <button class="filter-btn" data-filter-btn>
+              <button className="filter-btn">
                 KITCHEN
               </button>
             </li>
 
             <li>
-              <button class="filter-btn" data-filter-btn>
+              <button className="filter-btn" >
                 BEDROOM
               </button>
             </li>
 
             <li>
-              <button class="filter-btn" data-filter-btn>
+              <button className="filter-btn" >
                 OFFICE
               </button>
             </li>
 
             <li>
-              <button class="filter-btn" data-filter-btn>
+              <button className="filter-btn" >
                 BATHROOM
               </button>
             </li>
           </ul>
 
-          <ul class="grid-list">
+          <ul className="grid-list">
             <li>
               <Link to="product/1">
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serenti20.jpg"
+                      src="/assets/images/serenti20.jpg"
                       width="794"
                       height="637"
-                      alt="hero banner"
+                      alt="furniture"
                       class="w-100"
                     />
                   </figure>
@@ -62,14 +62,14 @@ function Projects() {
 
             <li>
               <Link to="product/2">
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serenti35.jpg"
+                      src="/assets/images/serenti35.jpg"
                       width="794"
                       height="637"
-                      alt="hero banner"
-                      class="w-100"
+                      alt="furniture"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -77,14 +77,14 @@ function Projects() {
             </li>
             <li>
               <Link to="product/3">
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serinti1.jpg"
+                      src="/assets/images/serinti1.jpg"
                       width="794"
                       height="637"
-                      alt="hero banner"
-                      class="w-100"
+                      alt="furniture"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -92,14 +92,14 @@ function Projects() {
             </li>
             <li>
               <Link to="product/4">
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serenti26.jpg"
+                      src="/assets/images/serenti26.jpg"
                       width="794"
                       height="637"
-                      alt="hero banner"
-                      class="w-100"
+                      alt="furniture"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -107,14 +107,14 @@ function Projects() {
             </li>
             <li>
               <Link to="product/5">
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serinti11.jpg"
+                      src="/assets/images/serinti11.jpg"
                       width="794"
                       height="637"
-                      alt="hero banner"
-                      class="w-100"
+                      alt="furniture"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -122,14 +122,14 @@ function Projects() {
             </li>
             <li>
               <Link to="product/5">
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serinti12.jpg"
+                      src="/assets/images/serinti12.jpg"
                       width="794"
                       height="637"
-                      alt="hero banner"
-                      class="w-100"
+                      alt="furniture"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -137,14 +137,29 @@ function Projects() {
             </li>
             <li>
               <Link to="product/6">
-                <div class="project-card">
-                  <figure class="card-banner img-holder">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
                     <img
-                      src="/src/assets/images/serinti13.jpg"
+                      src="/assets/images/serinti13.jpg"
                       width="794"
                       height="637"
-                      alt="hero banner"
-                      class="w-100"
+                      alt="furniture"
+                      className="w-100"
+                    />
+                  </figure>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="product/16">
+                <div className="project-card">
+                  <figure className="card-banner img-holder">
+                    <img
+                      src="/assets/images/serenti25.jpg"
+                      width="794"
+                      height="637"
+                      alt="furniture"
+                      className="w-100"
                     />
                   </figure>
                 </div>

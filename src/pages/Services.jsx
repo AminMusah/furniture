@@ -10,7 +10,7 @@ function Services() {
           <div class="service-card">
             <div class="card-icon">
               <img
-                src="/src/assets/images/serenti25.jpg"
+                src="/assets/images/serenti25.jpg"
                 width="794"
                 height="637"
                 alt="furniture"
@@ -32,7 +32,7 @@ function Services() {
           <div class="service-card">
             <div class="card-icon">
               <img
-                src="/src/assets/images/serinti1.jpg"
+                src="/assets/images/serinti1.jpg"
                 width="794"
                 height="637"
                 alt="furniture"
@@ -54,7 +54,7 @@ function Services() {
           <div class="service-card">
             <div class="card-icon">
               <img
-                src="/src/assets/images/serinti13.jpg"
+                src="/assets/images/serinti13.jpg"
                 width="794"
                 height="637"
                 alt="furniture"

@@ -18,6 +18,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/furniture/product/:id" element={<Product />} />
+        <Route path="/new-arrivals/product/:id" element={<Product />} />
     </Routes> 
   )
 }

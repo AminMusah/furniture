@@ -5,13 +5,12 @@ function About() {
   return (
     <div>
       <Header />
-      <section class="section about bg" id="about">
-        <div class="container">
-          <div class="about-content">
+      <section className="section about bg" id="about">
+        <div className="container">
+          <div className="about-content">
             <p
-              class="section-subtitle reveal-left text-color"
+              className="section-subtitle reveal-left text-color"
               id="about-label"
-              data-reveal
             >
               About Us
             </p>
@@ -20,7 +19,7 @@ function About() {
               Furniture Co.
             </h2>
 
-            <p class="section-text reveal-left text-color">
+            <p className="section-text reveal-left text-color">
               Furniture Co. is a service provider within the Furniture and
               interior design space. At Furniture Co., we provide high-quality
               furniture and ensure that each piece of furniture meets the
@@ -28,9 +27,9 @@ function About() {
             </p>
           </div>
 
-          <figure class="about-banner">
+          <figure className="about-banner">
             <img
-              src="/src/assets/images/serenti25.jpg"
+              src="/assets/images/serenti25.jpg"
               width="794"
               height="637"
               alt="furniture"

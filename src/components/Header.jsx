@@ -1,63 +1,90 @@
-import { Route, Routes, Link } from "react-router-dom"
-
+import { useState } from "react";
+import { Route, Routes, Link } from "react-router-dom";
+import Menu2LineIcon from "remixicon-react/Menu2LineIcon";
+import CloseLineIcon from "remixicon-react/CloseLineIcon";
 
 function Header() {
+  const [openMenu, setOpenMenu] = useState(false);
+
   return (
     <div>
-      <header class="header">
-    <div class="container">
+      <header className="header">
+        <div className="container">
+          <Link to="/" className="logo">
+            Furniture Co.
+          </Link>
 
-      <Link to="/" class="logo">Furniture Co.</Link>
+          <nav className={`navbar ${openMenu ? "navbar-active" : "navbar"}`}>
+            <div className="wrapper">
+              <Link to="/" className="logo">
+                Furniture Co.
+              </Link>
 
-      <nav class="navbar">
+              <button
+                className="nav-close-btn"
+                onClick={() => {
+                  setOpenMenu(!openMenu);
+                }}
+              >
+                <CloseLineIcon />
+              </button>
+            </div>
 
-        <div class="wrapper">
-        <Link to="/" class="logo">Furniture Co.</Link>
+            <ul className="navbar-list">
+              <li className="navbar-item">
+                <Link to="/" className="navbar-link">
+                  Home
+                </Link>
+              </li>
 
-          <button class="nav-close-btn" aria-label="close menu">
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+              <li className="navbar-item">
+                <Link to="/services" className="navbar-link">
+                  Services
+                </Link>
+              </li>
+
+              <li className="navbar-item">
+                <Link to="/furniture" className="navbar-link">
+                  Furniture
+                </Link>
+              </li>
+
+              <li className="navbar-item">
+                <Link to="/new-arrivals" className="navbar-link">
+                  New Arrivals
+                </Link>
+              </li>
+
+              <li className="navbar-item">
+                <Link to="/about" className="navbar-link">
+                  About Us
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          <button
+            className="nav-open-btn"
+            onClick={() => {
+              setOpenMenu(!openMenu);
+            }}
+          >
+            <Menu2LineIcon />{" "}
           </button>
+
+          <Link
+            to="/furniture"
+            className="btn btn-primary has-before has-after"
+          >
+            Go Shopping
+          </Link>
+          {openMenu === true ? <div className="overlay-active overlay"  onClick={() => {
+              setOpenMenu(!openMenu);
+            }}></div> : ""}
         </div>
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <Link to="/" class="navbar-link" >Home</Link>
-          </li>
-
-          <li class="navbar-item">
-            <Link to="/services" class="navbar-link" >Services</Link>
-          </li>
-
-          <li class="navbar-item">
-            <Link to="/furniture" class="navbar-link">Furniture</Link>
-          </li>
-
-          <li class="navbar-item">
-            <Link to="/new-arrivals" class="navbar-link">New Arrivals</Link>
-          </li>
-
-          <li class="navbar-item">
-            <Link to="/about" class="navbar-link" >About Us</Link>
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <button class="nav-open-btn">
-        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-      </button>
-
-      <Link to="/furniture" class="btn btn-primary has-before has-after">Go Shopping</Link>
-
-      <div class="overlay" data-nav-toggler data-overlay></div>
-
+      </header>
     </div>
-  </header>
-     
-    </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
