@@ -6,7 +6,7 @@ function NewArrivals() {
   return (
     <div>
       <Header />
-      <div class="arrival-content">
+      <div className="arrival-content">
         <Arrivals image="/assets/images/serenti20.jpg" name='Couch'/>
         <Arrivals image="/assets/images/serenti25.jpg" name='Sink'/>
         <Arrivals image="/assets/images/serenti26.jpg" name='Baththub'/>

@@ -3,6 +3,8 @@ import TwitterLineIcon from 'remixicon-react/TwitterLineIcon'
 import FacebookBoxLineIcon from 'remixicon-react/FacebookBoxLineIcon'
 import WhatsappLineIcon from 'remixicon-react/WhatsappLineIcon'
 function Footer() {
+  const date =  new Date()
+  const year = date.getFullYear()
   return (
     <div>
       <footer className="footer">
@@ -146,7 +148,7 @@ function Footer() {
 
           <div className="footer-bottom">
             <p className="copyright">
-              &copy; 2022 Furniture Co. All Rights Reserved.
+              &copy; {year} Furniture Co. All Rights Reserved.
             </p>
 
             <ul class="footer-bottom-list">
