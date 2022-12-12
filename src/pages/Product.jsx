@@ -1,47 +1,38 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import PaystackPop from "@paystack/inline-js";
-import { useState } from "react";
+import products from "../../data";
+import { CartContext } from "../CartContext";
+import Header from "../components/Header";
+import Footer from '../components/Footer'
 
-function Product() {
+function Product({ image, name, price }) {
+  const { addToCart } = useContext(CartContext);
+
   const { id } = useParams();
-  const [email, setEmail] = useState("");
-  const [amount, setAmount] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const payWithPaystack = (e) => {
-    e.preventDefault();
-    const payStack = new PaystackPop();
-    payStack.newTransaction({
-      key: "pk_test_26b8ff5d42befde7b35e08f9f379b26ef3e2c1c2",
-      amount: amount * 100,
-      email,
-      firstName,
-      lastName,
-      onSuccess(transaction){
-        let message = `Payment Complete! Reference ${transaction.reference}`
-        alert(message)
-        setAmount("")
-        setEmail("")
-        setFirstName("")
-        setLastName("")
-      },
-      onCancel(){
-alert(`You have canceled your transaction!`)
-      }
-    });
-  };
+  let itemName = "";
+  let itemCategory = "";
+  let itemPrice = "";
+  let itemImage = "";
 
+  products.find((item) => {
+    let product = id == item.id;
+    if (product) {
+      itemName = item.name;
+      itemCategory = item.category;
+      itemPrice = item.price;
+      itemImage = item.image;
+      return;
+    }
+  });
   return (
     <div>
-      <Header />
+      <Header/>
       <section className="container product-container">
-        <div className="product">
-          <div className="product-card">
-            <figure className="card-banner img-holder">
+        <div className="product checkout-wrapper">
+          <div className="product-card product-checkout ">
+            <figure className="card-banner img-holder ">
               <img
-                src="/assets/images/serenti20.jpg"
+                src={itemImage}
                 width="794"
                 height="637"
                 alt="furniture"
@@ -49,71 +40,23 @@ alert(`You have canceled your transaction!`)
               />
             </figure>
           </div>
-          <div>
-            <h2 className="h3 section-title text-center">
-              Item id :{id} <span className="has-before">Details</span>
-            </h2>
-            <ul>
-              <li>Lorem ipsum dolor sit amet.</li>
-              <li>Lorem ipsum dolor sit amet consectetur.</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-              <li>Lorem ipsum dolor sit.</li>
+          <div className="checkout-details">
+            <h2 className="text-center">Details</h2>
+            <ul  className="checkout-list">
+              <li>Item : {itemName}</li>
+              <li>Category : {itemCategory}</li>
+              <li>Price : {itemPrice}</li>
+              <div
+                className="add-to-cart-btn "
+                onClick={() => addToCart(name, price, image)}
+              >
+                Add to Cart
+              </div>
             </ul>
           </div>
         </div>
-        <form action="" className="product-form">
-          <h1>Make Payment</h1>
-          <ul>
-            <li>
-              <label>First Name</label>
-              <input
-                type="text"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                required
-              />
-            </li>
-            <li>
-              <label>Last Name</label>
-              <input
-                type="text"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-                required
-              />
-            </li>
-            <li>
-              <label>Amount</label>
-              <input
-                type="tel"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-                required
-              />
-            </li>
-            <li>
-              <label>Email</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </li>
-            <li>
-              <button
-                type="submit"
-                onClick={payWithPaystack}
-                className="btn btn-secondary"
-              >
-                Submit
-              </button>
-            </li>
-          </ul>
-        </form>
       </section>
-
-      <Footer />
+      <Footer/>
     </div>
   );
 }

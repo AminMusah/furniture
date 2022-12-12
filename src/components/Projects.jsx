@@ -51,7 +51,7 @@ function Projects() {
 
           <ul className="grid-list" >
             <li className={filter === 1 ? "active-content ": "disable-content"}>
-              <Link to="product/1">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -59,7 +59,7 @@ function Projects() {
                       width="794"
                       height="637"
                       alt="furniture"
-                      class="w-100"
+                      className="w-100"
                     />
                   </figure>
                 </div>
@@ -67,7 +67,7 @@ function Projects() {
             </li>
 
             <li className={filter === 5 ? "active-content ": "disable-content"}>
-              <Link to="product/2">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -82,7 +82,7 @@ function Projects() {
               </Link>
             </li>
             <li className={filter === 1 ? "active-content ": "disable-content"}>
-              <Link to="product/2">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -99,7 +99,7 @@ function Projects() {
             <li
               className={filter === 1 ? "active-content " : "disable-content"}
             >
-              <Link to="product/7">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -116,7 +116,7 @@ function Projects() {
             <li
               className={filter === 1 ? "active-content " : "disable-content"}
             >
-              <Link to="product/7">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -146,7 +146,7 @@ function Projects() {
               </Link>
             </li> */}
             <li className={filter === 5 ? "active-content ": "disable-content"}>
-              <Link to="product/4">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -161,7 +161,7 @@ function Projects() {
               </Link>
             </li>
             <li className={filter === 1 ? "active-content ": "disable-content"}>
-              <Link to="product/5">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -176,7 +176,7 @@ function Projects() {
               </Link>
             </li>
             <li className={filter === 1 ? "active-content ": "disable-content"}>
-              <Link to="product/5">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -191,7 +191,7 @@ function Projects() {
               </Link>
             </li>
             <li className={filter === 3 ? "active-content ": "disable-content"}>
-              <Link to="product/6">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -206,7 +206,7 @@ function Projects() {
               </Link>
             </li>
             <li className={filter === 2 ? "active-content ": "disable-content"}>
-              <Link to="product/16">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -221,7 +221,7 @@ function Projects() {
               </Link>
             </li>
             <li className={filter === 2 ? "active-content ": "disable-content"}>
-              <Link to="product/16">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -236,7 +236,7 @@ function Projects() {
               </Link>
             </li>
             <li className={filter === 2 ? "active-content ": "disable-content"}>
-              <Link to="product/16">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -251,7 +251,7 @@ function Projects() {
               </Link>
             </li>
             <li className={filter === 4 ? "active-content ": "disable-content"}>
-              <Link to="product/16">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -266,7 +266,7 @@ function Projects() {
               </Link>
             </li>
             <li className={filter === 3 ? "active-content ": "disable-content"}>
-              <Link to="product/16">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img
@@ -281,7 +281,7 @@ function Projects() {
               </Link>
             </li>
             <li className={filter === 4 ? "active-content ": "disable-content"}>
-              <Link to="product/16">
+              <Link to="/furniture">
                 <div className="project-card">
                   <figure className="card-banner img-holder">
                     <img

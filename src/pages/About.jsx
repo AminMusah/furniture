@@ -1,10 +1,10 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 function About() {
   return (
     <div>
-      <Header />
+      <Header/>
       <section className="section about bg" id="about">
         <div className="container">
           <div className="about-content">
@@ -15,7 +15,7 @@ function About() {
               About Us
             </p>
 
-            <h2 class="h2 section-title reveal-left text-color">
+            <h2 className="h2 section-title reveal-left text-color">
               Furniture Co.
             </h2>
 
@@ -33,12 +33,12 @@ function About() {
               width="794"
               height="637"
               alt="furniture"
-              class="w-100"
+              className="w-100"
             />
           </figure>
         </div>
       </section>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

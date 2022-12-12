@@ -17,7 +17,7 @@ function Footer() {
                 A new way to make the payments easy, reliable and 100% secure.
               </p>
 
-              <ul class="social-list">
+              <ul className="social-list">
                 <li>
                   <a href="#" className="social-link">
                     <YoutubeLineIcon/>
@@ -44,9 +44,9 @@ function Footer() {
               </ul>
             </div>
 
-            <ul class="footer-list">
+            <ul className="footer-list">
               <li>
-                <p class="footer-list-title">Useful Links</p>
+                <p className="footer-list-title">Useful Links</p>
               </li>
 
               <li>

@@ -1,7 +1,8 @@
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 function Furniture() {
   const [filter, setFilter] = useState(1);
@@ -12,7 +13,7 @@ function Furniture() {
 
   return (
     <div>
-      <Header />
+      <Header/>
       <section className="section project" id="project">
         <div className="container">
           <p className="section-subtitle has-before text-center">Furniture</p>
@@ -332,7 +333,7 @@ function Furniture() {
           </ul>
         </div>
       </section>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

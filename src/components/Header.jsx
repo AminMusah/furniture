@@ -2,10 +2,13 @@ import { useState } from "react";
 import { Route, Routes, Link } from "react-router-dom";
 import Menu2LineIcon from "remixicon-react/Menu2LineIcon";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
+import ShoppingCart2LineIcon from "remixicon-react/ShoppingCart2LineIcon";
+import { useContext } from "react";
+import { CartContext } from "../CartContext";
 
 function Header() {
   const [openMenu, setOpenMenu] = useState(false);
-
+  const { items } = useContext(CartContext);
   return (
     <div>
       <header className="header">
@@ -73,14 +76,26 @@ function Header() {
           </button>
 
           <Link
-            to="/furniture"
+            to="/new-arrivals"
             className="btn btn-primary has-before has-after"
           >
             Go Shopping
           </Link>
-          {openMenu === true ? <div className="overlay-active overlay"  onClick={() => {
-              setOpenMenu(!openMenu);
-            }}></div> : ""}
+
+          <Link to="/cart" className="shopping-cart-icon">
+            <ShoppingCart2LineIcon />{" "}
+            <span className="cart-quantity">{items.length}</span>
+          </Link>
+          {openMenu === true ? (
+            <div
+              className="overlay-active overlay"
+              onClick={() => {
+                setOpenMenu(!openMenu);
+              }}
+            ></div>
+          ) : (
+            ""
+          )}
         </div>
       </header>
     </div>

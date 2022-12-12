@@ -1,23 +1,26 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Arrivals from "../components/Arrivals";
+
+import Arrivals from "../components/Product";
+import products from "../../data";
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 function NewArrivals() {
   return (
     <div>
-      <Header />
-      <div className="arrival-content">
-        <Arrivals image="/assets/images/serenti20.jpg" name='Couch'/>
-        <Arrivals image="/assets/images/serenti25.jpg" name='Sink'/>
-        <Arrivals image="/assets/images/serenti26.jpg" name='Baththub'/>
-        <Arrivals image="/assets/images/serenti29.jpg" name='Table'/>
-        <Arrivals image="/assets/images/serinti2.jpg" name='Mirror'/>
-        <Arrivals image="/assets/images/serinti13.jpg" name='Bed'/>
-        <Arrivals image="/assets/images/serinti11.jpg" name='Wardrobe'/>
-        <Arrivals image="/assets/images/serinti2.jpg" name='Mirror'/>
-      </div>
+      <Header/>
+      <section className="section project" id="project">
+          <p className="section-subtitle has-before text-center">New Arrivals</p>
 
-      <Footer />
+          <h2 className="h2 section-title text-center">
+            Furniture Co. <span className="has-before">Latest</span>
+          </h2>
+          <div className="arrival-content">
+            {products.map((products) => (
+              <Arrivals image={products.image} name={products.name} price={products.price} id={products.id}/>
+            ))}
+          </div>
+          <Footer/>
+      </section>
     </div>
   );
 }

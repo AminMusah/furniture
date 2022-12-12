@@ -1,8 +1,8 @@
-import Header from "./Header";
 import Hero from "./Hero";
 import Projects from "./Projects";
-import Footer from "./Footer";
 import Features from "./Features";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function Home() {
   return (
