@@ -4,13 +4,38 @@ import PriceTagLineIcon from 'remixicon-react/PriceTagLineIcon'
 import User2LineIcon from 'remixicon-react/User2LineIcon'
 import { useContext } from 'react';
 import { CartContext } from '../CartContext';
+import Swal from 'sweetalert2'
+
 
 function Arrivals({image,name,price,id}) {
+  const alert = ()=>{
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Added to Cart'
+    })
+  }
   const {addToCart} = useContext(CartContext)
+
+  const addItem = ()=>{
+    addToCart(name,price,image,id) 
+    alert()
+  }
   return (
     <div>
         <div className="arrival-card">
-          <Link to="#" className="arrival-card-banner" >
+          <Link to={`product/${id}`} className="arrival-card-banner" >
             <img
               src={image}
               alt="Recent Commercial Real Estate Transactions"
@@ -46,7 +71,9 @@ function Arrivals({image,name,price,id}) {
                 <time dateTime="2022-27-04">Apr 27, 2022</time>
               </div>
 
-              <div className="add-to-cart-btn " onClick={()=> addToCart(name,price,image,id)}>
+              <div className="add-to-cart-btn " onClick={
+                addItem                
+              }>
                Add to Cart
               </div>
             </div>

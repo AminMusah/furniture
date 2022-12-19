@@ -8,6 +8,7 @@ const CartProvider = ({ children }) => {
   const addToCart = (name, price, image,id) => {
     setItems((prevState) => [...prevState, { name, price, image,id }]);
   };
+  
   const clearCart = () => {
     setItems((prevState) => []);
   };

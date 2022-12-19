@@ -4,9 +4,34 @@ import products from "../../data";
 import { CartContext } from "../CartContext";
 import Header from "../components/Header";
 import Footer from '../components/Footer'
+import Swal from "sweetalert2";
 
-function Product({ image, name, price }) {
+function Product({ }) {
   const { addToCart } = useContext(CartContext);
+
+  const alert = ()=>{
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Added to Cart'
+    })
+  }
+
+  const addItem = ()=>{
+    addToCart(itemName, itemPrice, itemImage,id) 
+    alert()
+  }
 
   const { id } = useParams();
   let itemName = "";
@@ -21,6 +46,7 @@ function Product({ image, name, price }) {
       itemCategory = item.category;
       itemPrice = item.price;
       itemImage = item.image;
+      console.log(itemPrice, 'price')
       return;
     }
   });
@@ -48,7 +74,7 @@ function Product({ image, name, price }) {
               <li>Price : {itemPrice}</li>
               <div
                 className="add-to-cart-btn "
-                onClick={() => addToCart(name, price, image)}
+                onClick={addItem}
               >
                 Add to Cart
               </div>

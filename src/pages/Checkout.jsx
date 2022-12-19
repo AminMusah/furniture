@@ -5,6 +5,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useContext } from "react";
 import { CartContext } from "../CartContext";
+import Swal from 'sweetalert2'
+
 
 function Product() {
   const { items, total } = useContext(CartContext);
@@ -13,6 +15,8 @@ function Product() {
   const [amount, setAmount] = useState(total(items));
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  
+  
   const payWithPaystack = (e) => {
     e.preventDefault();
     const payStack = new paystackPop();
@@ -72,6 +76,7 @@ function Product() {
                   type="tel"
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
+                  disabled
                   required
                 />
               </li>

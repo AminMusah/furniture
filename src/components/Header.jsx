@@ -63,6 +63,13 @@ function Header() {
                   About Us
                 </Link>
               </li>
+
+              <li className="navbar-item">
+                <Link to="/cart" className="shopping-cart-icon">
+                  <ShoppingCart2LineIcon />{" "}
+                  <span className="cart-quantity">{items.length}</span>
+                </Link>
+              </li>
             </ul>
           </nav>
 
@@ -82,10 +89,10 @@ function Header() {
             Go Shopping
           </Link>
 
-          <Link to="/cart" className="shopping-cart-icon">
+          {/* <Link to="/cart" className="shopping-cart-icon">
             <ShoppingCart2LineIcon />{" "}
             <span className="cart-quantity">{items.length}</span>
-          </Link>
+          </Link> */}
           {openMenu === true ? (
             <div
               className="overlay-active overlay"

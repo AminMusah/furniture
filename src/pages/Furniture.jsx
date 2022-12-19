@@ -1,8 +1,9 @@
-
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import products from "../../data";
+import Arrivals from "../components/Product";
 
 function Furniture() {
   const [filter, setFilter] = useState(1);
@@ -11,9 +12,16 @@ function Furniture() {
     setFilter(index);
   };
 
+  let bathroom = products.filter((product) => {
+    let bath = product.category === "Bathroom";
+    if (bath === true) {
+      console.log(product.image);
+    }
+  });
+
   return (
     <div>
-      <Header/>
+      <Header />
       <section className="section project" id="project">
         <div className="container">
           <p className="section-subtitle has-before text-center">Furniture</p>
@@ -23,7 +31,6 @@ function Furniture() {
           </h2>
 
           <ul className="filter-list">
-
             <li>
               <button
                 className={
@@ -81,259 +88,140 @@ function Furniture() {
           </ul>
 
           <ul className="grid-list">
-            <li
-              className={filter === 1 ? "active-content " : "disable-content"}
-            >
-              <Link to="product/7">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serenti20.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            
-            <li
-              className={filter === 1 ? "active-content " : "disable-content"}
-            >
-              <Link to="product/8">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serenti35.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li
-              className={filter === 1 ? "active-content " : "disable-content"}
-            >
-              <Link to="product/9">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serinti1.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li
-              className={filter === 5 ? "active-content " : "disable-content"}
-            >
-              <Link to="product/10">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serenti26.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 1 ? "active-content ": "disable-content"}>
-              <Link to="product/11">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serinti11.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 1 ? "active-content ": "disable-content"}>
-              <Link to="product/12">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serinti2.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 2 ? "active-content ": "disable-content"}>
-              <Link to="product/12">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serenti30.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 5 ? "active-content ": "disable-content"}>
-              <Link to="product/12">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serenti35.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 3 ? "active-content ": "disable-content"}>
-              <Link to="product/13">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serinti13.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 4 ? "active-content ": "disable-content"}>
-              <Link to="product/14">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serinti16.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 1 ? "active-content ": "disable-content"}>
-              <Link to="product/15">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serenti29.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 1 ? "active-content ": "disable-content"}>
-              <Link to="product/16">
-                <div class="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serenti26.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 5 ? "active-content ": "disable-content"}>
-              <Link to="product/17">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serenti25.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 4 ? "active-content ": "disable-content"}>
-              <Link to="product/18">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serenti27.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 1 ? "active-content ": "disable-content"}>
-              <Link to="product/19">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/serinti12.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
-            <li className={filter === 2  ? "active-content ": "disable-content"}>
-              <Link to="product/19">
-                <div className="project-card">
-                  <figure className="card-banner img-holder">
-                    <img
-                      src="/assets/images/photo_6034830961490902259_y.jpg"
-                      width="794"
-                      height="637"
-                      alt="furniture"
-                      className="w-100"
-                    />
-                  </figure>
-                </div>
-              </Link>
-            </li>
+            {products.map((product) => {
+              return (
+                <li
+                  className={
+                    filter === 1 ? "active-content " : "disable-content"
+                  }
+                >
+                  <Link to={`product/${product.id}`}>
+                    <div className="project-card">
+                      <figure className="card-banner img-holder">
+                        <img
+                          src={product.image}
+                          width="794"
+                          height="637"
+                          alt="furniture"
+                          className="w-100"
+                        />
+                      </figure>
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
+
+            {products.map((product) => {
+              if (product.category === "Kitchen") {
+                return (
+                  <li
+                    className={
+                      filter === 2 ? "active-content " : "disable-content"
+                    }
+                  >
+                    <Link to={`product/${product.id}`}>
+                      <div className="project-card">
+                        <figure className="card-banner img-holder">
+                          <img
+                            src={product.image}
+                            width="794"
+                            height="637"
+                            alt="furniture"
+                            className="w-100"
+                          />
+                        </figure>
+                      </div>
+                    </Link>
+                  </li>
+                );
+              }
+            })}
+            {products.map((product) => {
+              if (product.category === "Bedroom") {
+                return (
+                  <li
+                    className={
+                      filter === 3 ? "active-content " : "disable-content"
+                    }
+                  >
+                    <Link to={`product/${product.id}`}>
+                      <div className="project-card">
+                        <figure className="card-banner img-holder">
+                          <img
+                            src={product.image}
+                            width="794"
+                            height="637"
+                            alt="furniture"
+                            className="w-100"
+                          />
+                        </figure>
+                      </div>
+                    </Link>
+                  </li>
+                );
+              }
+            })}
+
+            {products.map((product) => {
+              if (product.category === "Bathroom") {
+                return (
+                  <li
+                    className={
+                      filter === 5 ? "active-content " : "disable-content"
+                    }
+                  >
+                    <Link to={`product/${product.id}`}>
+                      <div className="project-card">
+                        <figure className="card-banner img-holder">
+                          <img
+                            src={product.image}
+                            width="794"
+                            height="637"
+                            alt="furniture"
+                            className="w-100"
+                          />
+                        </figure>
+                      </div>
+                    </Link>
+                  </li>
+                );
+              }
+            })}
+        
+           
+              {products.map((product) => {
+              if (product.category === "Office") {
+                return (
+                  <li
+                    className={
+                      filter === 4 ? "active-content " : "disable-content"
+                    }
+                  >
+                    <Link to={`product/${product.id}`}>
+                      <div className="project-card">
+                        <figure className="card-banner img-holder">
+                          <img
+                            src={product.image}
+                            width="794"
+                            height="637"
+                            alt="furniture"
+                            className="w-100"
+                          />
+                        </figure>
+                      </div>
+                    </Link>
+                  </li>
+                );
+              }
+            })}
+
+           
+          
           </ul>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

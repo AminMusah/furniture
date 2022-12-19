@@ -67,7 +67,35 @@ const products = [
     category: "Bathroom",
     name: "sink",
     price: 1200,
-    image: "/assets/images/serenti32.jpg",
+    image: "/assets/images/serinti4.jpg",
+  },
+  {
+    id: 11,
+    category: "Kitchen",
+    name: "sink",
+    price: 1200,
+    image: "/assets/images/photo-1582913130063-8318329a94a3.avif",
+  },
+  {
+    id: 12,
+    category: "Kitchen",
+    name: "sink",
+    price: 1200,
+    image: "/assets/images/photo_6034830961490902259_y.jpg",
+  },
+  {
+    id: 13,
+    category: "Office",
+    name: "sink",
+    price: 1200,
+    image: "/assets/images/photo-1592078615290-033ee584e267.avif",
+  },
+  {
+    id: 14,
+    category: "Kitchen",
+    name: "sink",
+    price: 1200,
+    image: "/assets/images/photo-1600684388091-627109f3cd60.avif",
   },
 ];
 

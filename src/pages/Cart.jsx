@@ -5,17 +5,54 @@ import ArrowDropLeftLineIcon from "remixicon-react/ArrowDropLeftLineIcon";
 import CloseLineIcon from "remixicon-react/CloseLineIcon";
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Swal from 'sweetalert2'
+
 
 function Cart() {
   const { items, clearCart, clearItem, total } = useContext(CartContext);
 
-  // calculate items in cart
-  // let subtotal = 0;
-  // let sum = 0;
-  // items.map((item) => {
-  //   sum += item.price;
-  // });
-  // subtotal = sum;
+  const clearAlert = ()=>{
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Cart Empty'
+    })
+  }
+  const removeItem = ()=>{
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })
+    
+    Toast.fire({
+      icon: 'success',
+      title: 'Item removed'
+    })
+  }
+
+  const emptyCart = ()=>{
+    clearCart()
+    clearAlert()
+  }
+
   return (
     <div>
       <Header/>
@@ -51,7 +88,8 @@ function Cart() {
                 
                   <div
                     className="remove-btn"
-                    onClick={() => clearItem(item.id)}
+                    onClick={() =>
+                      removeItem(clearItem(item.id))}
                   >
                     <CloseLineIcon />
                   </div>
@@ -61,7 +99,7 @@ function Cart() {
             {items.length > 0 ? (
               <button
                 className="btn btn-primary has-before has-after clear-cart"
-                onClick={() => clearCart()}
+                onClick={emptyCart}
               >
                 Clear Cart
               </button>

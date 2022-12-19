@@ -715,6 +715,8 @@ body {
 
 .project-card .card-banner img {
   transition: var(--transition-2);
+  object-fit: cover;
+  aspect-ratio: 2/2;
 }
 
 .project-card:is(:hover, :focus-within) .card-banner img {
@@ -757,6 +759,8 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  padding: 10rem 0;
+  margin: 10rem 0;
 }
 
 .product-card {
@@ -875,11 +879,14 @@ color: var(--black);
 
 .shopping-cart-icon {
  position: relative;
+ top: 25px;
 }
+
+
 .shopping-cart-icon .cart-quantity {
  position: absolute;
  top: -11px;
- right: -11px;
+ left: 20px;
  background-color: var(--mustard);
  border-radius: 50%;
  width: 17px;
@@ -887,7 +894,7 @@ color: var(--black);
  font-size: 9px;
  font-weight: 600;
  color: var(--black);
- padding-left: 6px;
+ text-align: center;
  padding-top: 1px;
 }
 
@@ -940,13 +947,15 @@ color: var(--black);
 .arrival-card {
   overflow: hidden;
   width: 300px;
-  margin: 1rem;
+  margin: 3rem;
+  background-color: rgba(214, 212, 210, 0.1);
 }
 
 .arrival-card .arrival-card-banner img {
   height: 100%;
   object-fit: cover;
   transition: 0.5s ease;
+  aspect-ratio: 2/2;
 }
 
 .arrival-card:is(:hover, :focus-visible) .arrival-card-banner img {
@@ -1241,9 +1250,6 @@ time {
     width: 700px;
   }
 
-
-  
-
   .hero .social-link {
     display: flex;
     align-items: center;
@@ -1426,6 +1432,7 @@ time {
 
   .header .btn {
     display: inline-flex;
+    margin-right: 50px;
   }
 
   .header .btn::before,
@@ -1436,6 +1443,13 @@ time {
   .header .btn:is(:hover, :focus) {
     color: var(--white);
   }
+
+  .shopping-cart-icon {
+    position: fixed;
+    right: 20px;
+    top: 40px;
+    margin-left: 50px;
+   }
 
   /* hero */
 
