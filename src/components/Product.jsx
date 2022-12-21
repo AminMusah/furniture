@@ -2,12 +2,16 @@ import {Link }from 'react-router-dom'
 import CalendarLineIcon from 'remixicon-react/CalendarLineIcon'
 import PriceTagLineIcon from 'remixicon-react/PriceTagLineIcon'
 import User2LineIcon from 'remixicon-react/User2LineIcon'
-import { useContext } from 'react';
+import ShoppingCart2LineIcon from 'remixicon-react/ShoppingCart2LineIcon'
+import { useContext,useState } from 'react';
 import { CartContext } from '../CartContext';
 import Swal from 'sweetalert2'
 
 
 function Arrivals({image,name,price,id}) {
+  const [color,setColor] = useState("add-to-cart-btn");
+  const [add,setAdd] = useState("Add to Cart");
+
   const alert = ()=>{
     const Toast = Swal.mixin({
       toast: true,
@@ -30,6 +34,8 @@ function Arrivals({image,name,price,id}) {
 
   const addItem = ()=>{
     addToCart(name,price,image,id) 
+    setColor("added-to-cart")
+    setAdd("Added to Cart")
     alert()
   }
   return (
@@ -71,10 +77,10 @@ function Arrivals({image,name,price,id}) {
                 <time dateTime="2022-27-04">Apr 27, 2022</time>
               </div>
 
-              <div className="add-to-cart-btn " onClick={
+              <div className={color} onClick={
                 addItem                
               }>
-               Add to Cart
+               {add}
               </div>
             </div>
           </div>
