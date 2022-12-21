@@ -965,6 +965,10 @@ color: var(--black);
   scroll-snap-type:x mandatory;
 }
 
+.gallery-grid-list::-webkit-scrollbar {
+ height: 3px;
+}
+
 .gallery-grid-list li {
 padding: 60px 20px;
 border-radius: 10px;
