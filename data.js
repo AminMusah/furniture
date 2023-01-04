@@ -7,6 +7,55 @@ const products = [
     image: "/assets/images/serenti35.jpg",
   },
   {
+    id: 15,
+    category: "Kitchen",
+    name: "chair",
+    price: 200,
+    image: "/assets/images/pexels-pavel-danilyuk-7881483-removebg-preview.png",
+  },
+  {
+    id: 16,
+    category: "Bathroom",
+    name: "Sink",
+    price: 300,
+    image: "/assets/images/pexels-pixabay-276534-removebg-preview.png",
+  },
+  {
+    id: 17,
+    category: "Bedroom",
+    name: "Bed",
+    price: 300,
+    image: "/assets/images/pexels-max-vakhtbovych-6492400-removebg-preview.png",
+  },
+  {
+    id: 18,
+    category: "Bedroom",
+    name: "Bed",
+    price: 300,
+    image: "/assets/images/pexels-max-vakhtbovych-7018391-removebg-preview.png",
+  },
+  // {
+  //   id: 19,
+  //   category: "Bathroom",
+  //   name: "Sink",
+  //   price: 300,
+  //   image: "/assets/images/pexels-pavel-danilyuk-7881483-removebg-preview.png",
+  // },
+  {
+    id: 20,
+    category: "Bedroom",
+    name: "Chair",
+    price: 300,
+    image: "/assets/images/pexels-pixabay-276534-removebg-preview.png",
+  },
+  {
+    id: 21,
+    category: "Bedroom",
+    name: "couch",
+    price: 300,
+    image: "/assets/images/pexels-martin-péchy-1866149-removebg-preview.png",
+  },
+  {
     id: 2,
     category: "Kitchen",
     name: "Table",
@@ -97,6 +146,14 @@ const products = [
     price: 1200,
     image: "/assets/images/photo-1600684388091-627109f3cd60.avif",
   },
+  
+  // {
+  //   id: 16,
+  //   category: "Kitchen",
+  //   name: "chair",
+  //   price: 200,
+  //   image: "http://pngimg.com/uploads/vans/vans_PNG24.png",
+  // },
 ];
 
 export default products;

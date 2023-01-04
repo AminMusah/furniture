@@ -18,11 +18,11 @@ const CartProvider = ({ children }) => {
     setItems(newList)
   };
 
-  const total = (something) => {
+  const total = (ItemsInCart) => {
     // calculate items in cart
     let subtotal = 0;
     let sum = 0;
-    something.map((item) => {
+    ItemsInCart.map((item) => {
       sum += item.price;
     });
     subtotal = sum;

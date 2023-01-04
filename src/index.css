@@ -753,10 +753,10 @@ body {
 }
 
 .product-container {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   padding: 10rem 0;
   margin: 10rem 0;
 }
@@ -784,6 +784,7 @@ body {
 .product-form {
   width: 70%;
 }
+
 .product-form input {
   border: 1px solid var(--cool-gray);
   border-radius: var(--radius-10);
@@ -791,6 +792,7 @@ body {
   outline: 0.2rem;
   padding-left: 1rem;
 }
+
 .product-form button {
  margin: 2rem 0;
 }
@@ -799,6 +801,133 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.product-checkout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.holder-img {
+  aspect-ratio: 2/2;
+  position: relative;
+}
+
+
+.product-nav {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  z-index: 3;
+}
+
+.product-nav section div {
+  display: inline-block;
+  width: 2vmax;
+  height: 2vmax;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--color);
+  /* position: relative; */
+  z-index: 100;
+  /* mix-blend-mode: hue; */
+}
+
+.product-nav section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blend {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: hue;
+  /* box-shadow: 0px 0px 0px 1500px var(--color); */
+  background-color: #9fbfdf;
+}
+
+.product-nav section div + div {
+  margin-left: 1.5rem;
+}
+
+/* .product-nav section div:hover {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: hue;
+  box-shadow: 0px 0px 0px 1500px var(--color);
+} */
+
+/* .product-nav label:nth-of-type(1),
+#color-1:checked ~ .holder-img::after {
+  background-color: #dfbf9f;
+}
+
+.product-nav label:nth-of-type(2),#color-2:checked ~ .holder-img::after {
+  background-color: #9fdf9f;
+}
+
+.product-nav label:nth-of-type(3),#color-3:checked ~ .holder-img::after {
+  background-color: #9fbfdf;
+}
+
+.product-nav label:nth-of-type(4),#color-4:checked ~ .holder-img::after {
+  background-color: #df9fdf;
+} */
+
+.color1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: hue;
+  background-color: #f516f5;
+}
+
+.color2{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: hue;
+  background-color:  #1988f7;
+}
+
+.color3 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: hue;
+  background-color: #21f521;
+}
+
+.color4 { 
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: hue;
+ background-color:  #f38c24;
 }
 
 /* cart */
